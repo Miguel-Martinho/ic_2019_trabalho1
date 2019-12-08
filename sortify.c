@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
@@ -46,7 +46,7 @@ int main(int argc, char **argv)
     	    if (menu_input == 'q') { //Trato das funções mais simples primeiro para que o código não fique confuso logo no ínico
     	        
     	        print_status();
-    	        printf("Bye");
+    	        puts(MSG_BYE);
     	        return 0;
     	    }
     	    
