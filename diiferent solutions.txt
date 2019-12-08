@@ -1,0 +1,131 @@
+
+
+Funcção minmax com if's
+
+int minmax_gen(int level)
+{
+    int n;
+    int z;
+    if (level == 1) {
+        n = 0;
+        z = 10;
+    }
+    else if (level == 2) {
+        n = 0;
+        z = 30;
+        
+    }
+    else if (level == 3) {
+        n = -50;
+        z = 30;
+    }
+    else if (level == 4) {
+        n = -100;
+        z = 0;
+    }
+    else (level == 5); {
+        n = -200;
+        z = -100;
+    }
+    printf("%d, %d\n", n, z);
+    return 0;
+}
+
+
+Maneira suja de fazer
+a lista de números
+
+
+ /* if (level = 1) { //If para o nível em que estamos para deifinir o intervalo dos números dados
+    	            int i = 0;
+    	            int r[4];
+    	            
+        	            while (i < 4) {  //while para iterar o processo para nos dar os números randomizados
+        	                r[i] = rand_number(0,10);
+        	                i++;
+        	            }
+    	                printf("%d, %d, %d, %d\n", r[0], r[1], r[2], r[3]);
+    	        }
+    	        else if (level = 2) {
+    	            int i = 0;
+    	            int r[4];
+    	            
+        	            while (i < 4) {  //while para iterar o processo para nos dar os números randomizados
+        	                r[i] = rand_number(0,30);
+        	                i++;
+        	            }
+    	                printf("%d, %d, %d, %d\n", r[0], r[1], r[2], r[3]);
+    	        }
+    	         else if (level = 3) {
+    	            int i = 0;
+    	            int r[4];
+    	            
+        	            while (i < 4) {  //while para iterar o processo para nos dar os números randomizados
+        	                r[i] = rand_number(-50,30);
+        	                i++;
+        	            }
+    	                printf("%d, %d, %d, %d\n", r[0], r[1], r[2], r[3]);
+    	                /**/
+
+
+
+
+/*if (number_input[1] == r[0] || number_input[1] == r[1] || number_input[1] == r[2] || number_input[1] == r[3]) {
+                    continue;
+                }
+                else (number_input[1] != r[0] || number_input[1] != r[1] || number_input[1] != r[2] || number_input[1] != r[3]); {
+                    puts(MSG_SORT2);
+                    continue;
+                }
+                if (number_input[2] == r[0] || number_input[2] == r[1] || number_input[2] == r[2] || number_input[2] == r[3]) {
+                    continue;
+                }
+                else (number_input[2] != r[0] || number_input[2] != r[1] || number_input[2] != r[2] || number_input[2] != r[3]); {
+                    puts(MSG_SORT2);
+                    continue;
+                }
+                if (number_input[3] == r[0] || number_input[3] == r[1] || number_input[3] == r[2] || number_input[3] == r[3]) {
+                    continue;
+                }
+                else (number_input[3] != r[0] || number_input[3] != r[1] || number_input[3] != r[2] || number_input[3] != r[3]); {
+                    puts(MSG_SORT2);
+                    continue;
+                }
+                /**/
+
+
+
+
+
+
+#include <stdio.h>
+
+int main (){
+
+  int lista[4];
+  int n = sizeof(lista)/sizeof(int);
+  int temp;
+  int i, j;
+
+  printf("insere os numeros: ");
+  for (i = 0; i < n; ++i)
+    scanf ("%d", &lista[i]);
+
+
+
+  for (i = 0; i < n; ++i){
+      for (j = i + 1; j < n; ++j) {
+          if (lista[i] > lista[j]) {
+              temp = lista[i];
+              lista[i] = lista[j];
+              lista[j] = temp;
+              
+            }
+        }
+    }
+
+  printf("valores ordenados:");
+  for (i = 0; i < n; ++i)
+    printf("%d\n", lista[i]);
+
+}
